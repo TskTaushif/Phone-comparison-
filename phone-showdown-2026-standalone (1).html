@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartphone Showdown 2026 - Moto vs Poco vs Redmi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #0f172a, #0c1222, #0f172a);
+            color: #f0f0f8;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #1e293b;
+            padding: 0 2rem;
+        }
+
+        .nav-inner {
+            max-width: 7xl;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+
+        .brand {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #f0f0f8;
+        }
+
+        .brand span {
+            color: #00e5ff;
+        }
+
+        nav a {
+            color: #8888aa;
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-left: 2rem;
+            transition: color 0.2s;
+            letter-spacing: 0.01em;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            color: #00e5ff;
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            padding: 5rem 2rem;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 60% 50% at 70% 50%, #00e5ff0d 0%, transparent 70%),
+                        radial-gradient(ellipse 40% 60% at 20% 80%, #7c3aed0a 0%, transparent 60%);
+        }
+
+        .hero-inner {
+            max-width: 6xl;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+            text-align: center;
+        }
+
+        .hero-eyebrow {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: #00e5ff;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 1.25rem;
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: #00e5ff0d;
+            border: 1px solid #00e5ff33;
+            border-radius: 100px;
+        }
+
+        .hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 .highlight {
+            color: #00e5ff;
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            color: #8888aa;
+            line-height: 1.75;
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .badge {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            padding: 0.35rem 0.85rem;
+            border-radius: 100px;
+            border: 1px solid;
+            letter-spacing: 0.05em;
+        }
+
+        .badge-cyan { border-color: #00e5ff; color: #00e5ff; background: #00e5ff0d; }
+        .badge-purple { border-color: #a855f7; color: #a855f7; background: #a855f70d; }
+        .badge-red { border-color: #f43f5e; color: #f43f5e; background: #f43f5e0d; }
+        .badge-blue { border-color: #1E90FF; color: #1E90FF; background: #1E90FF0d; }
+        .badge-green { border-color: #00D084; color: #00D084; background: #00D0840d; }
+
+        .hero-phones {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-phone {
+            font-size: 4rem;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Section */
+        .section {
+            padding: 5rem 2rem;
+        }
+
+        .section-inner {
+            max-width: 6xl;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #00e5ff;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-label::before {
+            content: '— ';
+            margin-right: 0.5rem;
+        }
+
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(1.6rem, 3vw, 2.4rem);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-subtitle {
+            color: #8888aa;
+            font-size: 1rem;
+            max-width: 640px;
+            margin-bottom: 3.5rem;
+        }
+
+        /* Phone Cards Grid */
+        .phones-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .phone-card {
+            background: rgba(17, 17, 24, 0.5);
+            border: 2px solid;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .phone-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .phone-card.moto { border-color: #00e5ff50; }
+        .phone-card.poco { border-color: #a855f750; }
+        .phone-card.redmi { border-color: #f43f5e50; }
+        .phone-card.vivo { border-color: #1E90FF50; }
+        .phone-card.infinix { border-color: #00D08450; }
+
+        .phone-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+        }
+
+        .phone-card.moto::before { background: #00e5ff; }
+        .phone-card.poco::before { background: #a855f7; }
+        .phone-card.redmi::before { background: #f43f5e; }
+        .phone-card.vivo::before { background: #1E90FF; }
+        .phone-card.infinix::before { background: #00D084; }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+        }
+
+        .card-emoji {
+            font-size: 3rem;
+        }
+
+        .card-badge {
+            font-size: 0.7rem;
+            padding: 0.35rem 0.75rem;
+            border-radius: 100px;
+            border: 1px solid;
+            letter-spacing: 0.05em;
+        }
+
+        .phone-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .phone-tagline {
+            color: #8888aa;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .price-tag {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .specs-mini {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .spec-mini {
+            background: rgba(30, 41, 59, 0.5);
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            font-size: 0.75rem;
+        }
+
+        .spec-label {
+            color: #64748b;
+            text-transform: uppercase;
+            font-size: 0.65rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .spec-value {
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        .view-btn {
+            width: 100%;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 0.75rem;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .phone-card.moto .view-btn { background: #00e5ff; color: #000; }
+        .phone-card.poco .view-btn { background: #a855f7; color: #fff; }
+        .phone-card.redmi .view-btn { background: #f43f5e; color: #fff; }
+        .phone-card.vivo .view-btn { background: #1E90FF; color: #fff; }
+        .phone-card.infinix .view-btn { background: #00D084; color: #000; }
+
+        .view-btn:hover {
+            filter: brightness(1.2);
+            transform: scale(1.02);
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            animation: fadeIn 0.3s;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
+            animation: slideIn 0.3s;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-title {
+            display: flex;
+            gap: 1rem;
+            align-items: start;
+        }
+
+        .modal-emoji {
+            font-size: 3rem;
+        }
+
+        .modal-title-text h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            color: #8888aa;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .close-btn:hover {
+            color: #f0f0f8;
+        }
+
+        .modal-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-section h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .spec-item {
+            background: rgba(30, 41, 59, 0.5);
+            padding: 1rem;
+            border-radius: 0.75rem;
+            border: 1px solid #1e293b;
+        }
+
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .pros-box, .cons-box {
+            padding: 1rem;
+            border-radius: 0.75rem;
+            border: 1px solid;
+        }
+
+        .pros-box { background: #22c55e08; border-color: #22c55e30; }
+        .cons-box { background: #ef444408; border-color: #ef444430; }
+
+        .pros-title, .cons-title {
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        .pros-title { color: #22c55e; }
+        .cons-title { color: #ef4444; }
+
+        .pros-cons ul {
+            list-style: none;
+        }
+
+        .pros-cons li {
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .pros-box li::before { content: '✓'; color: #22c55e; font-weight: 700; }
+        .cons-box li::before { content: '✗'; color: #ef4444; font-weight: 700; }
+
+        .affiliate-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .affiliate-btn {
+            padding: 0.75rem;
+            border: 1px solid;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .affiliate-btn:hover {
+            filter: brightness(1.2);
+            transform: scale(1.05);
+        }
+
+        /* Comparison Table */
+        .comparison-wrap {
+            overflow-x: auto;
+            border-radius: 1rem;
+            border: 1px solid #1e293b;
+            background: rgba(17, 17, 24, 0.5);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 1rem;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        th {
+            background: rgba(30, 41, 59, 0.5);
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        /* Verdict Cards */
+        .verdict-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .verdict-card {
+            background: rgba(17, 17, 24, 0.5);
+            border: 2px solid;
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .verdict-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .verdict-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .verdict-card p {
+            color: #8888aa;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid #1e293b;
+            padding: 2rem;
+            text-align: center;
+            color: #64748b;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            nav { display: none; }
+            .phones-grid { grid-template-columns: 1fr; }
+            .pros-cons { grid-template-columns: 1fr; }
+            .modal-content { padding: 1rem; }
+            .specs-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="nav-inner">
+            <div class="brand">Phone Info <span>Tsk</span></div>
+            <nav>
+                <a onclick="scrollTo('contenders')">Contenders</a>
+                <a onclick="scrollTo('comparison')">Comparison</a>
+                <a onclick="scrollTo('verdict')">Verdict</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-inner">
+            <div class="hero-eyebrow">₹12,500 - ₹17,500 Budget Guide</div>
+            <h1>The Ultimate <span class="highlight">₹15,000</span> Smartphone Battle</h1>
+            <p>Compare 5 powerhouse phones in this price range. Click any phone to see complete specs, pros/cons, and buy from multiple platforms.</p>
+            <div class="hero-badges">
+                <span class="badge badge-cyan">Clean UI</span>
+                <span class="badge badge-purple">Performance King</span>
+                <span class="badge badge-red">Camera Beast</span>
+                <span class="badge badge-blue">Battery Champion</span>
+                <span class="badge badge-green">Value King</span>
+            </div>
+            <div class="hero-phones">
+                <div class="hero-phone" style="animation-delay: 0s;">Ⓜ️</div>
+                <div class="hero-phone" style="animation-delay: 0.2s;">🚀</div>
+                <div class="hero-phone" style="animation-delay: 0.4s;">📸</div>
+                <div class="hero-phone" style="animation-delay: 0.6s;">⚡</div>
+                <div class="hero-phone" style="animation-delay: 0.8s;">📱</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenders -->
+    <section class="section" id="contenders">
+        <div class="section-inner">
+            <div class="section-label">5 Amazing Options</div>
+            <h2 class="section-title">The Contenders</h2>
+            <p class="section-subtitle">Click any phone to see complete specifications, pros/cons, and buy from multiple platforms.</p>
+            <div class="phones-grid" id="phonesGrid"></div>
+        </div>
+    </section>
+
+    <!-- Comparison -->
+    <section class="section" id="comparison" style="background: rgba(30, 41, 59, 0.3);">
+        <div class="section-inner">
+            <div class="section-label">Quick Overview</div>
+            <h2 class="section-title">At a Glance</h2>
+            <div class="comparison-wrap">
+                <table id="comparisonTable"></table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Verdict -->
+    <section class="section" id="verdict">
+        <div class="section-inner">
+            <div class="section-label">Final Thoughts</div>
+            <h2 class="section-title">Which One Should You Buy?</h2>
+            <div class="verdict-grid" id="verdictGrid"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Phone Info Tsk. All affiliate links lead to official stores. Click any phone to see complete details and buy options.</p>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="phoneModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <div class="modal-emoji" id="modalEmoji"></div>
+                    <div class="modal-title-text">
+                        <h2 id="modalName"></h2>
+                        <p id="modalTagline" style="color: #8888aa;"></p>
+                    </div>
+                </div>
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+            </div>
+
+            <div class="modal-section">
+                <h3>Price</h3>
+                <p style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;" id="modalPrice"></p>
+                <p id="modalPriceRange" style="color: #8888aa; font-size: 0.9rem;"></p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Key Specifications</h3>
+                <div class="specs-grid" id="modalSpecs"></div>
+            </div>
+
+            <div class="modal-section">
+                <h3>Strengths & Limitations</h3>
+                <div class="pros-cons">
+                    <div class="pros-box">
+                        <div class="pros-title">✓ Strengths</div>
+                        <ul id="modalPros"></ul>
+                    </div>
+                    <div class="cons-box">
+                        <div class="cons-title">✗ Limitations</div>
+                        <ul id="modalCons"></ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <h3>Our Verdict</h3>
+                <p id="modalVerdict" style="color: #8888aa;"></p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Buy Now</h3>
+                <div class="affiliate-links" id="modalLinks"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const phones = [
+            {
+                id: "moto",
+                name: "Motorola G45 5G",
+                emoji: "Ⓜ️",
+                tagline: "Premium vegan leather design with a clean, ad-free Android experience.",
+                price: "₹11,999",
+                processor: "Snapdragon 6s Gen 3",
+                display: "6.5\" 120Hz IPS LCD",
+                camera: "50MP + 2MP Dual",
+                battery: "5000mAh / 18W",
+                accentColor: "#00e5ff",
+                cardClass: "moto",
+                pros: [
+                    "Near-stock Android (No Ads/Bloatware)",
+                    "Premium Vegan Leather Finish",
+                    "Solid 5G Connectivity",
+                    "Good Battery Life"
+                ],
+                cons: [
+                    "HD+ Resolution Display",
+                    "Slow 18W Charging",
+                    "Limited Performance"
+                ],
+                specs: [
+                    { label: "RAM", value: "4GB / 8GB" },
+                    { label: "Storage", value: "128GB" },
+                    { label: "OS", value: "Android 14" },
+                    { label: "Fingerprint", value: "Side Mounted" },
+                    { label: "Weight", value: "~200g" },
+                    { label: "Thickness", value: "8.2mm" }
+                ],
+                affiliateLinks: [
+                    { platform: "Flipkart", url: "https://fktr.in/4ERGkCB", color: "#00e5ff" },
+                    { platform: "Amazon", url: "https://amzn.to/4v4HBnX", color: "#FF9900" }
+                ],
+                verdict: "Best for users who value a clean, bloatware-free experience and premium build quality. Perfect for those who want a reliable daily driver without unnecessary software."
+            },
+            {
+                id: "poco",
+                name: "POCO M7 Pro 5G",
+                emoji: "🚀",
+                tagline: "Dominating performance with a stunning AMOLED display and rapid charging.",
+                price: "₹14,999",
+                processor: "MediaTek Dimensity 7025-Ultra",
+                display: "6.67\" 120Hz AMOLED",
+                camera: "50MP Sony LYT + 2MP",
+                battery: "5110mAh / 45W",
+                accentColor: "#a855f7",
+                cardClass: "poco",
+                pros: [
+                    "Beautiful 120Hz AMOLED Display",
+                    "Fastest Charging in segment (45W)",
+                    "Powerful Gaming Performance",
+                    "Sony LYT Camera Sensor"
+                ],
+                cons: [
+                    "HyperOS Contains Bloatware",
+                    "Plastic Build Quality",
+                    "Thermal Performance in Gaming"
+                ],
+                specs: [
+                    { label: "RAM", value: "6GB / 8GB" },
+                    { label: "Storage", value: "128GB / 256GB" },
+                    { label: "OS", value: "HyperOS (Android 15)" },
+                    { label: "Fingerprint", value: "In-Display" },
+                    { label: "Weight", value: "190g" },
+                    { label: "Thickness", value: "8.2mm" }
+                ],
+                affiliateLinks: [
+                    { platform: "Flipkart", url: "https://fktr.in/7fxsWgR", color: "#a855f7" }
+                ],
+                verdict: "Ideal for gamers and multimedia enthusiasts. The AMOLED display and fast charging make it perfect for power users who demand smooth performance."
+            },
+            {
+                id: "redmi",
+                name: "Redmi 13 5G",
+                emoji: "📸",
+                tagline: "Massive 108MP camera paired with a premium glass back design.",
+                price: "₹11,556",
+                processor: "Snapdragon 4 Gen 2",
+                display: "6.79\" 120Hz FHD+ LCD",
+                camera: "108MP + 2MP Main",
+                battery: "5030mAh / 33W",
+                accentColor: "#f43f5e",
+                cardClass: "redmi",
+                pros: [
+                    "Stunning 108MP Main Camera",
+                    "Premium Glass Back Design",
+                    "Large FHD+ Crisp Display",
+                    "Good Value for Money"
+                ],
+                cons: [
+                    "LCD Display (Not AMOLED)",
+                    "HyperOS Bloatware",
+                    "Average Performance"
+                ],
+                specs: [
+                    { label: "RAM", value: "6GB / 8GB" },
+                    { label: "Storage", value: "128GB" },
+                    { label: "OS", value: "HyperOS (Android 15)" },
+                    { label: "Fingerprint", value: "Side Mounted" },
+                    { label: "Weight", value: "~195g" },
+                    { label: "Thickness", value: "8.1mm" }
+                ],
+                affiliateLinks: [
+                    { platform: "Flipkart", url: "https://fktr.in/tinkBKa", color: "#f43f5e" },
+                    { platform: "Amazon", url: "https://amzn.to/4vabtiX", color: "#FF9900" },
+                    { platform: "Croma", url: "https://bitli.in/N69T2JP", color: "#E31937" }
+                ],
+                verdict: "Perfect for photography lovers. The 108MP camera delivers exceptional detail, and the large display is great for content consumption."
+            },
+            {
+                id: "vivo",
+                name: "Vivo T4 Lite 5G",
+                emoji: "⚡",
+                tagline: "Massive 6000mAh battery with a lightweight design and solid performance.",
+                price: "₹13,999",
+                priceRange: "Variants: 4GB+64GB ₹14,999 | 4GB+128GB ₹13,999 | 6GB+128GB ₹14,999",
+                processor: "MediaTek Dimensity 6300",
+                display: "6.74\" 90Hz LCD",
+                camera: "50MP + 2MP Dual",
+                battery: "6000mAh / 15W",
+                accentColor: "#1E90FF",
+                cardClass: "vivo",
+                pros: [
+                    "Massive 6000mAh Battery",
+                    "Lightweight at 202g",
+                    "Good Build Quality",
+                    "Dedicated Memory Card Slot"
+                ],
+                cons: [
+                    "15W Charging is Slow",
+                    "Poor Display Resolution (720p)",
+                    "Average Performance"
+                ],
+                specs: [
+                    { label: "RAM", value: "4GB / 6GB" },
+                    { label: "Storage", value: "64GB / 128GB" },
+                    { label: "OS", value: "Android 15" },
+                    { label: "Fingerprint", value: "Side Mounted" },
+                    { label: "Weight", value: "202g" },
+                    { label: "Thickness", value: "8.19mm" }
+                ],
+                affiliateLinks: [
+                    { platform: "Flipkart", url: "https://fktr.in/tdx07yy", color: "#1E90FF" }
+                ],
+                verdict: "Best for heavy users who need exceptional battery life. The 6000mAh battery easily lasts 2+ days, making it ideal for travelers."
+            },
+            {
+                id: "infinix",
+                name: "Infinix Note 50X 5G",
+                emoji: "📱",
+                tagline: "Fast processor with 45W charging and a large display for productivity.",
+                price: "₹13,499",
+                priceRange: "Variants: 6GB+128GB ₹13,499 | 8GB+128GB ₹14,999",
+                processor: "MediaTek Dimensity 7300 Ultimate",
+                display: "6.67\" 120Hz IPS LCD",
+                camera: "50MP Dual Rear",
+                battery: "5500mAh / 45W",
+                accentColor: "#00D084",
+                cardClass: "infinix",
+                pros: [
+                    "Fast Dimensity 7300 Processor",
+                    "45W Fast Charging",
+                    "120Hz Display Refresh Rate",
+                    "4K Video Recording"
+                ],
+                cons: [
+                    "LCD Display (Not AMOLED)",
+                    "No 3.5mm Headphone Jack",
+                    "Not Water Resistant"
+                ],
+                specs: [
+                    { label: "RAM", value: "6GB + 6GB Virtual" },
+                    { label: "Storage", value: "128GB" },
+                    { label: "OS", value: "Android 15" },
+                    { label: "Fingerprint", value: "Side Mounted" },
+                    { label: "Weight", value: "198.9g" },
+                    { label: "Thickness", value: "7.98mm" }
+                ],
+                affiliateLinks: [
+                    { platform: "Amazon", url: "https://amzn.to/4e7Z2Oz", color: "#FF9900" },
+                    { platform: "Flipkart", url: "https://fktr.in/84nO562", color: "#00e5ff" }
+                ],
+                verdict: "Great for productivity and multitasking. The fast processor and 120Hz display make it excellent for work and gaming."
+            }
+        ];
+
+        function renderPhones() {
+            const grid = document.getElementById('phonesGrid');
+            grid.innerHTML = phones.map(phone => `
+                <div class="phone-card ${phone.cardClass}" onclick="openModal('${phone.id}')">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="card-emoji">${phone.emoji}</div>
+                            <span class="card-badge" style="background: ${phone.accentColor}0d; border-color: ${phone.accentColor}50; color: ${phone.accentColor};">Click to View</span>
+                        </div>
+                        <h3 class="phone-name" style="color: ${phone.accentColor};">${phone.name}</h3>
+                        <p class="phone-tagline">${phone.tagline}</p>
+                        <div class="price-tag" style="color: ${phone.accentColor};">${phone.price}</div>
+                        <div class="specs-mini">
+                            <div class="spec-mini">
+                                <div class="spec-label">Processor</div>
+                                <div class="spec-value">${phone.processor.split(' ')[0]}</div>
+                            </div>
+                            <div class="spec-mini">
+                                <div class="spec-label">Display</div>
+                                <div class="spec-value">120Hz</div>
+                            </div>
+                            <div class="spec-mini">
+                                <div class="spec-label">Camera</div>
+                                <div class="spec-value">${phone.camera.split(' ')[0]}</div>
+                            </div>
+                            <div class="spec-mini">
+                                <div class="spec-label">Battery</div>
+                                <div class="spec-value">${phone.battery.split('/')[0]}</div>
+                            </div>
+                        </div>
+                        <button class="view-btn">View Full Details →</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderComparison() {
+            const table = document.getElementById('comparisonTable');
+            const headers = ['Feature', ...phones.map(p => p.name)];
+            const features = ['Price', 'Display', 'Processor', 'Camera', 'Battery'];
+
+            let html = '<thead><tr>';
+            headers.forEach((h, i) => {
+                if (i === 0) {
+                    html += `<th>${h}</th>`;
+                } else {
+                    html += `<th style="color: ${phones[i-1].accentColor};">${h}</th>`;
+                }
+            });
+            html += '</tr></thead><tbody>';
+
+            features.forEach(feature => {
+                html += '<tr>';
+                html += `<td style="color: #64748b;">${feature}</td>`;
+                phones.forEach(phone => {
+                    let value = '';
+                    if (feature === 'Price') value = phone.price;
+                    else if (feature === 'Display') value = phone.display;
+                    else if (feature === 'Processor') value = phone.processor.split(' ')[0];
+                    else if (feature === 'Camera') value = phone.camera;
+                    else if (feature === 'Battery') value = phone.battery;
+                    html += `<td>${value}</td>`;
+                });
+                html += '</tr>';
+            });
+
+            html += '</tbody>';
+            table.innerHTML = html;
+        }
+
+        function renderVerdict() {
+            const grid = document.getElementById('verdictGrid');
+            grid.innerHTML = phones.map(phone => `
+                <div class="verdict-card" style="border-color: ${phone.accentColor}50;" onclick="openModal('${phone.id}')">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">${phone.emoji}</div>
+                    <h3 style="color: ${phone.accentColor};">${phone.name}</h3>
+                    <p>${phone.verdict}</p>
+                    <button class="view-btn" style="background: ${phone.accentColor}20; color: ${phone.accentColor}; border: 1px solid ${phone.accentColor}50;">Learn More</button>
+                </div>
+            `).join('');
+        }
+
+        function openModal(phoneId) {
+            const phone = phones.find(p => p.id === phoneId);
+            if (!phone) return;
+
+            document.getElementById('modalEmoji').textContent = phone.emoji;
+            document.getElementById('modalName').textContent = phone.name;
+            document.getElementById('modalName').style.color = phone.accentColor;
+            document.getElementById('modalTagline').textContent = phone.tagline;
+            document.getElementById('modalPrice').textContent = phone.price;
+            document.getElementById('modalPrice').style.color = phone.accentColor;
+            document.getElementById('modalPriceRange').textContent = phone.priceRange || '';
+
+            const specsHtml = phone.specs.map(s => `
+                <div class="spec-item">
+                    <div class="spec-label">${s.label}</div>
+                    <div class="spec-value">${s.value}</div>
+                </div>
+            `).join('');
+            document.getElementById('modalSpecs').innerHTML = specsHtml;
+
+            const prosHtml = phone.pros.map(p => `<li>${p}</li>`).join('');
+            document.getElementById('modalPros').innerHTML = prosHtml;
+
+            const consHtml = phone.cons.map(c => `<li>${c}</li>`).join('');
+            document.getElementById('modalCons').innerHTML = consHtml;
+
+            document.getElementById('modalVerdict').textContent = phone.verdict;
+
+            const linksHtml = phone.affiliateLinks.map(link => `
+                <a href="${link.url}" target="_blank" class="affiliate-btn" style="background: ${link.color}20; color: ${link.color}; border-color: ${link.color}50;">
+                    ${link.platform} →
+                </a>
+            `).join('');
+            document.getElementById('modalLinks').innerHTML = linksHtml;
+
+            document.getElementById('phoneModal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('phoneModal').classList.remove('active');
+        }
+
+        function scrollTo(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('phoneModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        // Initialize
+        renderPhones();
+        renderComparison();
+        renderVerdict();
+    </script>
+</body>
+</html>
